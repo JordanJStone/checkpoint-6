@@ -26,6 +26,11 @@ const routes = [
     name: 'Account',
     component: loadPage('AccountPage'),
     beforeEnter: authGuard
+  },
+  {
+    path: '/:catchAll(.*)*',
+    redirect: '/api/blogs',
+    component: null
   }
 ]
 

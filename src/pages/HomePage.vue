@@ -13,7 +13,8 @@ export default {
   name: 'HomePage',
   setup() {
     const state = reactive({
-      allBlogs: computed(() => AppState.allBlogs)
+      allBlogs: computed(() => AppState.allBlogs),
+      user: computed(() => AppState.user)
     })
     onMounted(async() => {
       try {
