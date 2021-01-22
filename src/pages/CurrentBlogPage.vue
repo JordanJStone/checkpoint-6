@@ -1,6 +1,5 @@
 <template>
   <h1>{{ blog.name }}</h1>
-  <p>{{ blog.creator }}</p>
 </template>
 
 <script>

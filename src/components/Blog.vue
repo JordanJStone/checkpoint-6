@@ -1,7 +1,8 @@
 <template>
-  <div class="col-4">
-    <router-link :to="{name: 'currentBlog', params: {id: blogProp.id}}">
-      <h3>{{ blogProp.name }}</h3>
+  <div class="col-4 text-center">
+    <router-link :to="{name: 'CurrentBlog', params: {id: blogProp.id}}">
+      <h2>Title: {{ blogProp.title }}</h2>
+      <h4>Author: {{ blogProp.creator.name }}</h4>
     </router-link>
   </div>
 </template>
@@ -17,3 +18,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

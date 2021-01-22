@@ -1,7 +1,6 @@
 <template>
-  testing
   <div class="row">
-    <Blog v-for="singleBlog in state.blogs" :key="singleBlog.id" :blog-prop="singleBlog" />
+    <Blog v-for="singleBlog in state.allBlogs" :key="singleBlog._id" :blog-prop="singleBlog" />
   </div>
 </template>
 
@@ -9,12 +8,12 @@
 import { onMounted, reactive, computed } from 'vue'
 import { logger } from '../utils/Logger'
 import { blogsService } from '../services/BlogsService'
-import { Appstate } from '../AppState'
+import { AppState } from '../AppState'
 export default {
-  name: 'Home',
+  name: 'HomePage',
   setup() {
     const state = reactive({
-      blogs: computed(() => Appstate.allBlogs)
+      allBlogs: computed(() => AppState.allBlogs)
     })
     onMounted(async() => {
       try {
