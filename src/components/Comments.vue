@@ -1,7 +1,7 @@
 <template>
-  <div class="text-center">
+  <div class="row text-center">
     <router-link :to="{name: 'CurrentComments', params: {id: commentProp.id}}">
-      <h2>Title: {{ commentProp.body }}</h2>
+      <h2>• {{ commentProp.body }}</h2>
       <h4>Author: {{ commentProp.creator.name }}</h4>
     </router-link>
   </div>

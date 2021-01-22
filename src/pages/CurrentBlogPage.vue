@@ -3,11 +3,12 @@
     <div class="row">
       <div class="col">
         <h1>{{ blog.title }}</h1>
-        <h3>{{ blog.body }}</h3>
       </div>
     </div>
     <div class="row">
-      <Comment v-for="singleComment in comments" :key="singleComment.id" :comment-prop="singleComment" />
+      <div class="col">
+        <Comment v-for="singleComment in comments" :key="singleComment.id" :comment-prop="singleComment" />
+      </div>
     </div>
   </div>
 </template>
