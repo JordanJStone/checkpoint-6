@@ -6,6 +6,7 @@ class CommentsService {
   async getComments(blogId) {
     const res = await blogApi.get('api/blogs/' + blogId + '/comments')
     AppState.blogComments = res.data
+    logger.log(AppState.blogComments)
   }
 
   async createComment() {

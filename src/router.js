@@ -17,6 +17,11 @@ const routes = [
     component: loadPage('CurrentBlogPage')
   },
   {
+    path: '/:id/comments',
+    name: 'CurrentComments',
+    component: loadPage('Comments')
+  },
+  {
     path: '/about',
     name: 'About',
     component: loadPage('AboutPage')
