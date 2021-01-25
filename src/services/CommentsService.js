@@ -9,8 +9,8 @@ class CommentsService {
     logger.log(AppState.blogComments)
   }
 
-  async createComment() {
-    const res = await blogApi.post('api/comments')
+  async createComment(commentData) {
+    const res = await blogApi.post('api/comments', commentData)
     logger.log(res)
     this.getComments()
   }
