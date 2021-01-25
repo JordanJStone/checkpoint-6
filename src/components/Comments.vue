@@ -1,11 +1,15 @@
 <template>
-  <div class="row text-center">
-    <router-link :to="{name: 'CurrentComments', params: {id: commentProp.id}}">
-      <h2>
-        {{ commentProp.body }}
-      </h2>
-      <h4>Author: {{ commentProp.creator.name }}</h4>
-    </router-link>
+  <div class="row">
+    <!-- <router-link :to="{name: 'CurrentComments', params: {id: commentProp.id}}"> -->
+    <h2 class="pt-4">
+      {{ commentProp.body }}
+    </h2>
+    <!-- </router-link> -->
+  </div>
+  <div>
+    <h4 class="pb-2">
+      Author: {{ commentProp.creator.name }}
+    </h4>
   </div>
 </template>
 

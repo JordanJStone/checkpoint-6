@@ -6,17 +6,18 @@ class CommentsService {
   async getComments(blogId) {
     const res = await blogApi.get('api/blogs/' + blogId + '/comments')
     AppState.blogComments = res.data
-    logger.log(AppState.blogComments)
+    // logger.log(AppState.blogComments)
   }
 
-  async createComment(commentData) {
-    const res = await blogApi.post('api/comments', commentData)
+  async createComment() {
+    logger.log('Creating Comment in Service')
+    const res = await blogApi.post('api/comments')
     logger.log(res)
     this.getComments()
   }
 
   async deleteComment(commentId) {
-    await blogApi.delete('api/comment/' + commentId)
+    await blogApi.delete('api/comments/' + commentId)
     this.getComments()
   }
 
