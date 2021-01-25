@@ -7,7 +7,7 @@
           <input
             type="text"
             name="blogId"
-            id="blogId"
+            id="Appstate.activeBlog.id"
             v-model="state.newComment.body"
             class="form-control"
             placeholder="Your comment here"
